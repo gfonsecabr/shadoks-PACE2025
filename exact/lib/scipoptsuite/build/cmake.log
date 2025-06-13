@@ -1,0 +1,1 @@
+ -DZLIB=off -DREADLINE=off -DGMP=off -DPAPILO=off -DZIMPL=off -DIPOPT=off -DSANITIZE_UNDEFINED=on -DTPI=tny -DSOPLEX_DIR=/home/florent/UQAM/MaxSAT2024/code/EvalMaxSAT/lib/scipoptsuite/build -DSYM=none

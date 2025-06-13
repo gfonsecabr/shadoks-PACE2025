@@ -1,0 +1,2 @@
+/usr/bin/ar qc libEvalMaxSAT.a CMakeFiles/EvalMaxSAT.dir/src/mcqd.cpp.o
+/usr/bin/ranlib libEvalMaxSAT.a
