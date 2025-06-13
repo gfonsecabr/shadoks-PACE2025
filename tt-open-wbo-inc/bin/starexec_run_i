@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./tt-open-wbo-inc-IntelSATSolver_static $1

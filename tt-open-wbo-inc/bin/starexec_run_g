@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./tt-open-wbo-inc-Glucose4_1_static $1
