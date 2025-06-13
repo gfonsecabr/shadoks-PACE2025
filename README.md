@@ -6,14 +6,16 @@ Team Shadoks code for Hitting Set and Dominating Set for the PACE 2025 competiti
 
 There are three static linked executables:
 
- - exact: the exact hitting set and dominating set solver that guarantees optimality of the solution produced or runs forever if it cannot find an optimal solution.
- - heuristic: the heuristic hitting set and dominating set solver runs for 5 minutes and outputs the best solution found
- - anytime: this is a modified verision of the MAXSAT anytime solver TT-Open-WBO-Inc. The executable must be in the same directory of the other ones and it will be called automatically by the hitting/dominating set solvers.
+ - ``exact``: the exact hitting set and dominating set solver that guarantees optimality of the solution produced or runs forever if it cannot find an optimal solution.
+ - ``heuristic``: the heuristic hitting set and dominating set solver runs for 5 minutes and outputs the best solution found
+ - ``anytime``: this is a modified verision of the MAXSAT anytime solver TT-Open-WBO-Inc. The executable must be in the same directory of the other ones and it will be called automatically by the hitting/dominating set solvers.
 
 The solver takes 2 optional command line arguments:
 
- - inputfile: Name of the input file. If not given, the input is taken from the standard input.
- - outputfile: Name of the output file. If not given, the solution is written to the standard output.
+ - ``inputfile``: Name of the input file. If not given, the input is taken from the standard input.
+ - ``outputfile``: Name of the output file. If not given, the solution is written to the standard output.
+
+The behavior of the solvers is not deterministic because of the use of time limits throughout the solvers. If teams are allowed 3 versions, please run our solvers 3 times to make the comparison more fair.
 
 ## Compiling
 
