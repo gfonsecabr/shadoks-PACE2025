@@ -28,3 +28,10 @@ To compile, make sure that your g++ version is at least 10.1 and run:
         make rs -j
 
 Then rename the tt-open-wbo-inc-Glucose4_1_static file to anytime and copy it to the same directory as the other executable files.
+
+This version of the solver has been modified in the following ways:
+
+ - The input file is from standard input because optil.io does not accept files saved to disk
+ - The execution stops after the nuwls solver
+ - Some default parameters have been changed
+   
