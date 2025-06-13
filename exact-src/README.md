@@ -15,7 +15,7 @@ Then run the solve with either of the following:
 ./exact inputfile outputfile
 ```
 
-Make sure the anytime solver file called 'anytime' is in the same directory. If for some reason you need to change the anytime solver directory or name, simply change the following line of main.cpp:
+Make sure the anytime solver file called ``anytime`` is in the same directory. If for some reason you need to change the anytime solver directory or name, simply change the following line of ``main.cpp``:
 
 ```c
 const std::string ANYTIME = "./anytime";
