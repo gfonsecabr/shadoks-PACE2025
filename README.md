@@ -27,7 +27,7 @@ make
 ```
 There are two executables: shadoks and tt or anytime depending on the sub challenge. Those two executables are mandatory to be in the same directory for the execution. A copy after compilation was placed under the bin directory.
 
-There are no external dependencies, all dependencies are already included and compiled with shadoks. GLPK 5.0 is included as a compiled library, and the source code is available at [[https://www.gnu.org/software/glpk/#downloading]]. A modified version of EvalMaxSAT is included, and is compiled together with our main solvers.
+There are no external dependencies, all dependencies are already included and compiled with shadoks. GLPK 5.0 is included as a compiled library, and the source code is available at https://www.gnu.org/software/glpk/#downloading . Modified versions of EvalMaxSAT and open-mcs are included and compiled together with our main solvers.
 
 ## Algorithms
 
