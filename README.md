@@ -4,7 +4,7 @@ Team Shadoks code for Hitting Set and Dominating Set for the PACE 2025 competiti
 
 ## Running the Solver
 
-There are three static linked executables:
+There are three static linked executables in the root directory:
 
  - ``exact``: the exact hitting set and dominating set solver that guarantees optimality of the solution produced or runs forever if it cannot find an optimal solution.
  - ``heuristic``: the heuristic hitting set and dominating set solver runs for 5 minutes and outputs the best solution found
@@ -19,15 +19,16 @@ The behavior of the solvers is not deterministic because of the use of time limi
 
 ## Compiling
 
-Please refer to each sub directories but the compilation principles are the same. The directory src contains the sources. The compilation can be done as follows in the src directory.
+The directory ``heuristic-src`` contains the source code of ``heuristic`` and the directory ``exact-src`` contains the source code of ``excact``. The compilacan be done as follows in the src directory.
 
 ```bash
 cmake .
 make
 ```
-There are two executables: shadoks and tt or anytime depending on the sub challenge. Those two executables are mandatory to be in the same directory for the execution. A copy after compilation was placed under the bin directory.
 
-There are no external dependencies, all dependencies are already included and compiled with shadoks. GLPK 5.0 is included as a compiled library, and the source code is available at https://www.gnu.org/software/glpk/#downloading . Modified versions of EvalMaxSAT and open-mcs are included and compiled together with our main solvers.
+The directory ``tt-open-wbo-in`` contains the source of ``anytime``. Please see the compilation instruction in the ``README.md`` file of the directory for compilation instructions.
+
+There are no external dependencies, all dependencies are already included and compiled with shadoks. GLPK 5.0 is included as a compiled library, and the unmodified source code is available at https://www.gnu.org/software/glpk/#downloading . Modified versions of EvalMaxSAT and open-mcs are included and compiled together with our main solvers.
 
 ## Algorithms
 
