@@ -36,13 +36,15 @@ The solvers are for hitting set. Dominating set instances are reduced to hitting
 
 The **heuristic** solver does essentially the following:
  1) Apply three reduction rules: (i) If an edge e is a superset of another edge, remove e. (ii) If a vertex v hits a subset of another vertex, remove v. (iii) If an edge has a single vertex v, add v to the solution and remove all edges that contain v. 
- 2) Reduce the problem to MAXSAT and run an anytime MAXSAT heuristic solver for around a minute.
- 3) Local search: Remove some vertices of the solution, get the subhypergraph of uncovered edges and solve it with either an exact MAXSAT solver or GLPK MIP solver. Repeat this step until out of time.
+ 2) Try to solve each connected component exactly with MIP or MAXSAT solvers, from small to large, aborting if too hard.
+ 3) Reduce the problem to MAXSAT and run an anytime MAXSAT heuristic solver for around a minute.
+ 4) Local search: Remove some vertices of the solution, get the subhypergraph of uncovered edges and solve it with either an exact MAXSAT solver or GLPK MIP solver. Repeat this step until out of time.
 
 The **exact** solver does essentially the following:
  1) Apply the same reduction rules of the heuristic solver.
- 2) If the hyperedges have degree 2, the problem is vertex cover. Solve it using an exact Independent Set solver.
- 3) Otherwise, find a good heuristic solution (as above) and give it as an initial solution to the MAXSAT solver EvalMaxSAT.
+ 2) Try to solve each connected component exactly with MIP or MAXSAT solvers, from small to large, aborting if too hard, but with a larger timeout than in the heuristic version.
+ 3) If all hyperedges have degree 2, the problem is vertex cover. Solve it using an exact Independent Set solver.
+ 4) Otherwise, find a good heuristic solution (as steps 3 and 4 above) and give it as an initial solution to the MAXSAT solver EvalMaxSAT.
 
 ## LICENSE
 Copyright 2025 Guilherme D. da Fonseca, Fabien Feschet, and Yan Gerard, the Shadoks team.
