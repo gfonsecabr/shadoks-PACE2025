@@ -1,4 +1,4 @@
-## Exact solver
+## Heuristic solver
 
 This folder contains the source of the heuristic solver. To compile it run:
 
