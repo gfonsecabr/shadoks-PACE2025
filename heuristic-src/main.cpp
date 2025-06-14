@@ -86,8 +86,9 @@ std::vector<int> improve(HyperGraph &hg, int fs, const std::unordered_set<int> &
       if(iter%4 == 3)
         iter++;
     }
-    if(iter%4 == 3 && steps[3] > 100) // Enough for statistics
-      iter++;
+    if(iter%4 == 3 && steps[3] > 50 && !failed[1] && steps[1] > 50
+      && time[3]/steps[3] > 1.3 * time[1]/ steps[1])
+      iter++; // Skip step 3 to gain efficiency
 
     double titer = elapsed();
     int g = 0;
